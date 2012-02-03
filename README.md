@@ -1,4 +1,6 @@
-ParallelDownloader - A PHP class to download many urls in parallel using different http proxies.
+#ParallelDownloader
+A PHP class to download many urls in parallel using different http proxies.
+See the test_real_with_public_proxies_and_urls.php file for an example invokation.
 
 --------------
 
