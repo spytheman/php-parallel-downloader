@@ -25,7 +25,7 @@ $starturls = array(
                    "http://www.catcar.info/",
                    "http://www.facebook.com/",
                    "http://www.yahoo.com/",
-                   "http://www.pozdravi.net/",
+                   "http://www.pozdravi.net/test.txt",
                    "http://www.paribg.com/admin.css",
                    "http://jaltici.com/static/website.js",
                    "http://www.tejkari.com/style.css",
