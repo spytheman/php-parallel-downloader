@@ -1,3 +1,22 @@
+#filedownloader.php
+A command line script, that will download a list of URLs 
+(given in a file), using http proxies (given in another file).
+The goal is to download many URLs using different proxies in parallel,
+in order to avoid automated blocking and detection from the targeted
+hosts.
+
+Example usage: 
+   php filedownloader.php  --proxiesfile=proxies.txt --urlsfile=urls.txt --verbose=100 --skipalreadyexistingfiles
+   php filedownloader.php  --proxiesfile=proxies.txt --urlsfile=urls.txt -v  
+   php filedownloader.php  --proxiesfile=proxies.txt --urlsfile=urls.txt -v  --referrer=http://www.dir.bg/
+   php filedownloader.php  --proxiesfile=proxies.txt --urlsfile=urls.txt -v  --referrer=http://www.dir.bg/ --chunksize=20 #### download maximum 20 urls at once
+   php filedownloader.php  -p=proxies.txt -u=urls.txt
+
+If you are on a Posix system like MacOS or Linux, you can invoke the
+script directly, without prefixing it with the php interpreter.
+
+--------------
+
 #ParallelDownloader
 A PHP class to download many urls in parallel using different http proxies.
 
