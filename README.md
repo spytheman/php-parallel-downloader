@@ -27,31 +27,32 @@ script directly, without prefixing it with the php interpreter.
 
 --------------
 
-#ParallelDownloader
+#ParallelProxyCrawler
    A PHP class to download many urls in parallel using different http proxies.
 
-   See the test_real_with_public_proxies_and_urls.php file for an example invokation.
+   See the provided **test_real_with_public_proxies_and_urls.php** and the **filedownloader.php** 
+files for example invokations.
 
 --------------
 
    After the class has downloaded an URL, an overideable callback function 
-named 'process_result' will be invoked. You can easily override it to do
-anything you want, like: store the content in a file, put it in a DB,
-parse it and extract some info ... 
+named '*process_result*' or an overrideable callback '*on_failed_url*' will be invoked. 
+You can easily override them to do anything you want, like: store the content 
+in a file, put it in a DB, parse it and extract some info ... 
 
-   Just ensure that you return false when you want the URL to be retried again, 
-using a different proxy (perhapse because the proxy that was used, returned 
-an ad, instead of the real content, or an network error occured, and so on ...)
+   Just ensure that you return **false** from '*process_result*' when you want 
+the URL to be retried again, using a different proxy (perhapse because the 
+proxy that was used, returned an ad, instead of the real content, or an network 
+error occured, and so on ...)
 
-   See the provided test_real_with_public_proxies_and_urls.php for an
-example invokation. 
-
-   See the end of the paralleldownloader.php for an example of
-subclassing and overiding the process_result function.
+   See the end of the paralleldownloader.php for examples of
+subclassing and overiding the callback functions.
 
 --------------
 
-   The folder slowproxy contains a simple NodeJS based http proxy with
+#slowproxy
+
+   The folder slowproxy contains a simple _http://nodejs.org/_ based http proxy with
 configurable latency (minimum latency time and a variable random
 jitter time).
 
